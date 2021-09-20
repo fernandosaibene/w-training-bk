@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { expressMiddleware, expressRequestIdMiddleware } = require('express-wolox-logger');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -7,6 +8,7 @@ const routes = require('./app/routes');
 const errors = require('./app/middlewares/errors');
 const documentation = require('./documentation');
 const logger = require('./app/logger');
+
 
 const DEFAULT_BODY_SIZE_LIMIT = 1024 * 1024 * 10;
 const DEFAULT_PARAMETER_LIMIT = 10000;
